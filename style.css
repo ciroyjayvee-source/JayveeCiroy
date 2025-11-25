@@ -51,9 +51,10 @@ nav .active {
     border-radius: 6px;
 }
 
-/* ------- Section Container ------- */
+/* ------- Sections Container------- */
 section {
     max-width: 900px;
+    width: 90%;         /* ← ADD THIS */
     margin: 60px auto;
     padding: 30px;
     background: rgba(15, 23, 42, 0.55);
@@ -295,5 +296,53 @@ footer {
     html, body {
     height: 100%;
 }
+
+}
+
+
+/* ------- MOBILE FIXES (screens under 768px) ------- */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    .gallery-container img,
+    .project-item img {
+        height: 180px;
+    }
+
+    /* Popup images scale on mobile */
+    #viewerImg,
+    #projectImg {
+        width: 90%;
+        height: auto;
+        max-height: 80%;
+    }
+
+    #closeBtn, #projectClose {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
 
 }
